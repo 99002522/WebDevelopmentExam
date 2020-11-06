@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="registration.js"></script>
+</head>
+<body>
+    <table>
+        <form action="" method="GET" name="myform">
+            <tr>
+                <td>Enter name</td>
+                <td><input type="text" name="username" id="uname" placeholder="Enter name"/><br/></td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td><input type="password" name="password" id="pass" placeholder="Enter password"/><br></td>
+            </tr>
+            <tr>
+                <td>Enter Email</td>
+                <td><input type="email" name="email" id="eid" placeholder="Enter Email"><br></td>
+            </tr>
+            <tr>
+                <td>Enter Phone Number</td>
+                <td><input type="phone" name="phonenumber" id="pnumber" placeholder="Enter Phone number"></td>
+            </tr>
+            <tr>
+                <td>Enter City</td>
+                <td><input type="text" name="city" id="ucity" placeholder="Enter City Name"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="register" onclick="validationForm()"/></td>
+                <td><input type="reset" value="clear"/></td>
+            </tr>
+    </form>
+    </table>
+    <div id="mydiv" style="background-color: yellow;"></div>
+</body>
+</html>

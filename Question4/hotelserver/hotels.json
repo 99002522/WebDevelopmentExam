@@ -1,0 +1,31 @@
+[{
+    "name":"Fairfield",
+    "city":"Banglore",
+    "cuisine":"Breakfast",
+    "type":"Non veg"
+},
+{
+    "name":"Fivestar",
+    "city":"Mumbai",
+    "cuisine":"Lunch",
+    "type":"Non veg"
+},
+{
+    "name":"Four session",
+    "city":"Banglore",
+    "cuisine":"Breakfast",
+    "type":"Veg"
+},
+{
+    "name":"Heights",
+    "city":"Nashik",
+    "cuisine":"Lunch",
+    "type":"Veg"
+},
+{
+    "name":"Golden heights",
+    "city":"Pune",
+    "cuisine":"Brunch",
+    "type":"Veg"
+}
+]

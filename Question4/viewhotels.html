@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                var url = "http://localhost:3000/showHotels";
+                $.get(url, function(data, status){
+                    data.forEach(hotel => {
+                        var str='';
+                        for(const prob in hotel){
+                            str+=prob+' '+hotel[prob]+' '+'<br>';
+                        }
+                        $('#mydiv').append(str).append('<br>');
+                    });
+                })
+            });
+
+            $("#button2").click(function(){
+                var url="http://localhost:3000/showByCity";
+                var citychoice = $('#city').val();
+                $.get(url,{city:citychoice}, function(data, status){
+                    data.forEach(hotel=>{
+                    var str='';
+                        for(const prob in hotel){
+                            str+=prob+' '+hotel[prob]+' '+'<br>';
+                        }
+                        $('#mydiv').append(str).append('<br>');
+                    })
+                });
+            });
+
+            $("#button3").click(function(){
+                var url="http://localhost:3000/showByType";
+                var citychoice = $('#type').val();
+                $.get(url,{type:typechoice}, function(data, status){
+                    data.forEach(hotel=>{
+                    var str='';
+                        for(const prob in hotel){
+                            str+=prob+' '+hotel[prob]+' '+'<br>';
+                        }
+                        $('#mydiv').append(str).append('<br>');
+                    })
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="List of Hotels" id="button1"><br><br>
+
+    <input type="text" id="city">
+    <input type="button" id="button2" value="Search hotels by city"><br><br>
+    
+    Hotel type
+    <select name="type" id="hoteltype">
+        <option value="select">--select--</option>
+        <option value="veg">Veg</option>
+        <option value="Non veg">Non Veg</option>
+    </select>
+    <input type="button" id="button3" value="Search hotels by type"><br><br>
+
+    Hotels by cuisine
+    <select name="cuisine" id="hotelcuisine">
+        <option value="select">--select--</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="Brunch">Brunch</option>
+    </select>
+    <input type="button" id="button4" value="Search hotels by cuisine"><br><br>
+
+    <div id="mydiv" style="background-color: yellow;"></div>
+
+</body>
+</html>
